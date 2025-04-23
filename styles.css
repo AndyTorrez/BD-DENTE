@@ -9,30 +9,29 @@ body {
     width: 100%;
     height: 100vh;
     display: flex;
-    flex-direction: column; /* Cambia a columna en móvil */
+    flex-direction: column; /* Cambia a forma de columna en móvil */
 }
 
 .div-1 {
     width: 100%;
-    height: 50vh; /* Mitad de la pantalla en móvil */
+    height: 55vh; /* Abarca el 55% de la pantalla en móvil */
     background: #4373B9;
     position: relative;
 }
 
 .div-2 {
     width: 100%;
-    height: 50vh; /* Mitad de la pantalla en móvil */
+    height: 45vh; /* Abarca el 45% de la pantalla en móvil */
     background: #FFFFFF;
     position: relative;
-    border-left: none; /* Eliminamos el borde triangular en móvil */
 }
 
 nav a {
     text-decoration: none;
     color: rgb(255, 255, 255);
-    margin-right: 20px;
+    margin-right: 30px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 nav .navbar {
@@ -48,58 +47,56 @@ nav .navbar {
     flex-direction: column;
     align-items: center; 
     margin-top: 10%;
+
 }
 
 .welcome button {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    padding: 0;
+    margin-top: 1%;
 }
   
 #users-button {
-    width: 40px;
+    width: 43px;
     height: auto;
 }
 
 #title {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 2.5rem; /* Tamaño relativo */
-    letter-spacing: 2px;
+    font-size: 3rem; 
+    letter-spacing: 3px;
     margin-bottom: 20px;
     text-align: center;
 }
 
 .main-logo img {
-    width: 80%;
-    max-width: 300px;
+    max-width: 350px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-/* Media queries para pantallas más grandes */
-@media (min-width: 768px) {
+/* Estilo para pantallas más grandes */
+@media (min-width: 800px) {
     .wrapper {
-        flex-direction: row; /* Volvemos a fila en desktop */
+        flex-direction: row; /* Forma Fila para Escritorio */
     }
     
     .div-1 {
-        width: calc(55% - 40px);
+        width:55%;
         height: 100vh;
     }
     
     .div-2 {
-        width: calc(45% + 40px);
+        width:45%;
         height: 100vh;
-        border-left: 80px solid #4373B9;
-        border-bottom: 100vh solid transparent;
     }
     
     #title {
-        font-size: 5rem; /* Tamaño más grande en desktop */
+        font-size: 5rem; /* Tamaño más grande en escritorio */
         letter-spacing: 5px;
     }
     
@@ -107,9 +104,12 @@ nav .navbar {
         width: 60px;
     }
     
-    nav a {
-        margin-right: 30px;
-        font-size: 18px;
+
+    .main-logo img {
+        width: 100%;
+        max-width: 500px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
     }
 }
-  
